@@ -1,0 +1,3 @@
+export {
+    getDataTest
+} from './api';
