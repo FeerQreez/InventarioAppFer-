@@ -1,16 +1,17 @@
 import axios from 'axios';
 
-const baseUrl = 'https://request.in';
+const urlWebHost = 'https://inventariofer.000webhostapp.com/'
 
-export const getDataTest = async () => {
-    try {
-        const response = await fetch('https://reactnative.dev/movies.json');
-        const json = await response.json();
-        console.log("data movies", json);
-        return (json);
-    } catch (error) {
-        console.log("error", error);
-    }
-};
+export const testService = () =>
+    axios.get(`${urlWebHost}testJson.php`)
+        .then(response => response?.data);
 
+export const getBodegas = () =>
+    axios.get(`${urlWebHost}Bodega.php`)
+        .then((response => response?.data));
 
+export const getCategories = () =>
+    axios.get(`${urlWebHost}Categoria.php`)
+        .then((response => response?.data));
+
+    //LISTAS PROVEEDORES, 

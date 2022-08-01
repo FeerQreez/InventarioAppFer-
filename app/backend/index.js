@@ -1,3 +1,5 @@
 export {
-    getDataTest
+    testService,
+    getBodegas,
+    getCategories,
 } from './api';

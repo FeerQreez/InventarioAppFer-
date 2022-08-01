@@ -8,6 +8,7 @@ import AgregarProducto from '../screens/AgregarProducto';
 import AgregarProveedor from '../screens/AgregarProveedor';
 import BuscarProducto from '../screens/BuscarProducto';
 import AgregarBodegaEstante from '../screens/AgregarBodegaEstante';
+import Consultas from '../screens/Consultas';
 
 function MainNavigationFunction() {
     const mainStack = createNativeStackNavigator();
@@ -15,12 +16,41 @@ function MainNavigationFunction() {
     return (
         <mainStack.Navigator initialRouteName={'Menu'}>
             {/* <mainStack.Screen name='PantalladePrueba' component={PantalladePrueba} /> */}
-            <mainStack.Screen name='Menu' component={Menu} />
-            <mainStack.Screen name='ActualizarProducto' component={ActualizarProducto} />
-            <mainStack.Screen name='AgregarProducto' component={AgregarProducto} />
-            <mainStack.Screen name='AgregarProveedor' component={AgregarProveedor} />
-            <mainStack.Screen name='BuscarProducto' component={BuscarProducto} />
-            <mainStack.Screen name='AgregarBodegaEstante' component={AgregarBodegaEstante} />
+            <mainStack.Screen name='Menu' component={Menu}
+                options={{
+                    title: '',
+                    headerTransparent: true,
+                }} />
+            <mainStack.Screen name='ActualizarProducto' component={ActualizarProducto}
+                options={{
+                    headerTintColor: '#FFF',
+                    headerTransparent: true,
+                }} />
+            <mainStack.Screen name='AgregarProducto' component={AgregarProducto}
+                options={{
+                    headerTintColor: '#FFF',
+                    headerTransparent: true,
+                }} />
+            <mainStack.Screen name='AgregarProveedor' component={AgregarProveedor}
+                options={{
+                    headerTintColor: '#FFF',
+                    headerTransparent: true,
+                }} />
+            <mainStack.Screen name='BuscarProducto' component={BuscarProducto}
+                options={{
+                    headerTintColor: '#FFF',
+                    headerTransparent: true,
+                }} />
+            <mainStack.Screen name='AgregarBodegaEstante' component={AgregarBodegaEstante}
+                options={{
+                    headerTintColor: '#FFF',
+                    headerTransparent: true,
+                }} />
+            <mainStack.Screen name='Consultas' component={Consultas}
+                options={{
+                    headerTintColor: '#FFF',
+                    headerTransparent: true,
+                }} />
         </mainStack.Navigator>
     );
 }

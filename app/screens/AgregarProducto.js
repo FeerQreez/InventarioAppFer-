@@ -1,11 +1,19 @@
 // AGREGAR PRODUCTO
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     View, ImageBackground, Text,
     TextInput, TouchableOpacity,
 } from 'react-native';
+import { testService } from '../backend/index';
 
 export default function AgregarProducto() {
+    useEffect(() => {
+        console.log("Effect");
+        testService()
+            .then((data) => {
+                console.log("data testService", data);
+            }).catch((error) => { console.log("error testService"); });
+    }, []);
     return (
         <>
             <View style={{ flex: 1 }}>
